@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "dfnycpayroll"
+		},
+		"ls_db_nycpayroll_connectionString": {
+			"value": ""
+		},
+		"ls_nycpayrollstorage_accountKey": {
+			"value": ""
+		},
+		"ls_wknycpayroll_connectionString": {
+			"value": ""
+		},
+		"ls_nycpayrollstorage_properties_typeProperties_url": {
+			"value": "https://nycpayrollstorage.dfs.core.windows.net/"
+		}
+	}
+}
