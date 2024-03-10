@@ -21,9 +21,9 @@ Azure Resources used for this project:
 
 1. Create the data lake and upload data
 
-- Create an Azure Data Lake Storage Gen2 (storage account) and associated storage container resource. In the created container, create three directories in this storage container named       - dirpayrollfiles,
-  - dirhistoryfiles,
-  - dirstaging.
+- Create an Azure Data Lake Storage Gen2 (storage account) and associated storage container resource. In the created container, create three directories in this storage container named
+  - dirpayrollfiles,
+  - dirhistoryfiles.
 - Upload the below files in **dirpayrollfiles** folder:
   - EmpMaster.csv
   - AgencyMaster.csv
