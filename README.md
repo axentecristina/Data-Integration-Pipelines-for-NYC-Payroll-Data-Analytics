@@ -54,6 +54,9 @@ Azure Resources used for this project:
 2. Create a Linked Service to SQL Database;
 ![LINKED_SERVICE_SQLDATABASE_PROOF](https://github.com/axentecristina/Data-Integration-Pipelines-for-NYC-Payroll-Data-Analytics/assets/48519726/f42dcb4f-9959-41c3-a84a-743d70c58e41)
 
+3. Create a Linked Service to Azure Synapse Analytics.
+![LINKED_SERVICE_SYNAPSE_WORKSPACE_PROOF](https://github.com/axentecristina/Data-Integration-Pipelines-for-NYC-Payroll-Data-Analytics/assets/48519726/e8baf28c-73ca-45d0-839e-c1d7479e1da2)
+
 ## Step 3: Create Datasets in Azure Data Factory
 
 1. Create the datasets for the files from Azure Data Lake Gen2
@@ -89,14 +92,14 @@ Extract the 2021 year data and historical data, merge, aggregate and store it in
   - Select the sink as summary table created in SQL db
   - In Settings, tick Truncate table
 - Add another Sink activity, this will create two sinks after Aggregate
-  - Select the sink as dirstaging in Azure DataLake Gen2 storage
-  - In Settings, tick Clear the folder
+  - Select the sink as summary table created in Azure Synapse Analytics
+  - In Settings, tick Truncate table
  
 ![DATAFLOW_SUMMARY_PROOF](https://github.com/axentecristina/Data-Integration-Pipelines-for-NYC-Payroll-Data-Analytics/assets/48519726/96254665-276a-4fe9-bcec-5a358deb32e0)
 
 ## Step 6: Pipeline Creation
 
-- We will create a pipeline to load data from Azure DataLake Gen2 storage in SQL db for individual datasets, perform aggregations and store the summary results back into SQL db destination table;
+- We will create a pipeline to load data from Azure DataLake Gen2 storage in SQL db for individual datasets, perform aggregations and store the summary results back into SQL db and Azure Synapse destination table;
 
 ![PIPELINE_PROOF](https://github.com/axentecristina/Data-Integration-Pipelines-for-NYC-Payroll-Data-Analytics/assets/48519726/7098b1a9-d7f1-430e-bdf9-f5efb3a8161e)
   
@@ -104,7 +107,7 @@ Extract the 2021 year data and historical data, merge, aggregate and store it in
 
 ![SCREENSHOT_PIPELINE_RUN_PROOF](https://github.com/axentecristina/Data-Integration-Pipelines-for-NYC-Payroll-Data-Analytics/assets/48519726/291cd7f7-b964-427a-8866-b7256ec82d7a)
 
-- Verify Pipeline run artifacts
+- Verify Pipeline
   
 ![QUERY_SUMMARY_SYNAPSE_PROOF](https://github.com/axentecristina/Data-Integration-Pipelines-for-NYC-Payroll-Data-Analytics/assets/48519726/6d49ffc0-763b-45e6-8fb9-ba3698e3b5b1)
 
